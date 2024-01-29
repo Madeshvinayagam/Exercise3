@@ -52,29 +52,33 @@ class ViewController: UIViewController {
         updateTextView()
     }
     
-    
-    @IBAction func submitbutton(_ sender: Any) {
+    @IBAction func submitButton(_ sender: Any) {
+        
         if isInformationComplete() {
-                    invisibleLabel.text = "Successfully submitted!"
-                } else {
+          invisibleLabel.text = "Successfully submitted!"
+            } else {
                     invisibleLabel.text = "Complete the missing Info!"
-                }
+                    }
     }
+    
+
     
     
     @IBAction func clearButton(_ sender: Any) {
         clearAllFields()
     }
     
-        private func updateTextView() {
-            let userInfo = """
-            First Name: \(firstNameTextField.text ?? "")
-            Last Name: \(lastNameTextField.text ?? "")
-            Country: \(countryTextField.text ?? "")
-            Age: \(ageTextField.text ?? "")
-            """
-            textViewInput.text = userInfo
-        }
+    private func updateTextView() {
+           
+           let fullName = "Full Name: \(firstNameTextField.text ?? "") \(lastNameTextField.text ?? "")"
+           
+           let userInfo = """
+           \(fullName)
+           Country: \(countryTextField.text ?? "")
+           Age: \(ageTextField.text ?? "")
+           """
+           textViewInput.text = userInfo
+       }
     
     
     
