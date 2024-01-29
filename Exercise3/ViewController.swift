@@ -57,12 +57,9 @@ class ViewController: UIViewController {
         if isInformationComplete() {
           invisibleLabel.text = "Successfully submitted!"
             } else {
-                    invisibleLabel.text = "Complete the missing Info!"
+            invisibleLabel.text = "Complete the missing Info!"
                     }
     }
-    
-
-    
     
     @IBAction func clearButton(_ sender: Any) {
         clearAllFields()
